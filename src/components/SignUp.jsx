@@ -14,6 +14,15 @@ const SignUp = () => {
       <form action="#" className="login-form">
         <div className="input-wrapper">
           <input
+            type="username"
+            placeholder="Username"
+            className="input-field"
+            required></input>
+          <i className="material-symbols-rounded">person</i>
+        </div>
+
+        <div className="input-wrapper">
+          <input
             type="email"
             placeholder="Email address"
             className="input-field"
