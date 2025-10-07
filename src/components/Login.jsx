@@ -1,13 +1,20 @@
+import "../index.css";
+import { Link } from "react-router-dom";
+
 const Login = () => {
+  const tempAlert = function () {
+    return alert("Getting around to making this work");
+  };
+
   return (
     <div className="login-container">
       <h2 className="form-title">Log in with</h2>
       <div className="social-login">
-        <button className="social-button">
+        <button className="social-button" onClick={tempAlert}>
           <img src="google.svg" alt="Google" className="social-icon" />
           Google{" "}
         </button>
-        <button className="social-button">
+        <button className="social-button" onClick={tempAlert}>
           <img src="apple.svg" alt="Apple" className="social-icon" />
           Apple
         </button>
@@ -40,7 +47,7 @@ const Login = () => {
       </form>
 
       <p className="signup-text">
-        Don't have an account? <a href="#">Signup now</a>
+        Don't have an account? <Link to="/signup"> Signup now</Link>
       </p>
     </div>
   );

@@ -20,6 +20,15 @@ body {
   padding: 0 0.6rem;
 }
 
+.signup-container {
+  max-width: 410px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px black;
+}
+
 .login-container {
   max-width: 410px;
   margin: 0 auto;
