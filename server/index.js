@@ -1,13 +1,19 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const mongoose = require("mongoose");
-const jwt = require("jsonwebtoken");
+// const mongoose = require("mongoose");
+// const jwt = require("jsonwebtoken");
+
+const signupRoute = require("./routes/signup");
+const bodyParser = require("body-parser");
 
 const app = express();
 app.use(cors());
+app.use(bodyParser.json()); // tells express when a req comes in with a JSON body, parse it and attach the result to req.body
+app.use("/user", signupRoute); // really "user/register"
+// all routes in routes/signup will be reachable under "/user"
 
-require("./database/dbConfig"); //connects the dbConfig.js file
+require("./database/dbConfig"); //connects the dbConfig.js file upon the server starting
 
 dotenv.config({ path: "../.env" }); // loads .env but tells it exactly where to look in the root
 const PORT = process.env.PORT || 5000;

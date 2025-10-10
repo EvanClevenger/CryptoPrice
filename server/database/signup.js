@@ -10,12 +10,15 @@ async function createUser(userData) {
   const createdUser = new User({
     name,
     email,
-    hashedPassword,
+    password: hashedPassword,
     role: "customer",
   });
 
-  const savedUser = await createdUser.save();
+  const savedUser = await createdUser.save(); // save() is a mongoDB method
   return savedUser;
 }
 
-module.exports = { createUser };
+//this function hashes password, creates new mongo user, saves it to DB
+
+module.exports = { createUser }; // <-- 'named export' means we export an object, mostly used to export multiple functions
+// module.exports = createUser; would work too

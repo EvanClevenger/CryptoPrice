@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  "mongodb+srv://evanclevenger_db_user:saVH7kJRjvHY3Lla@cluster0.x1xif3j.mongodb.net/"
-);
+  `mongodb+srv://evanclevenger_db_user:saVH7kJRjvHY3Lla@cluster0.x1xif3j.mongodb.net/`
+); //connects to our DB
 
 mongoose.connection.on("connected", () => {
   console.log("Connected to MongoDB");

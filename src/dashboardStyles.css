@@ -1,0 +1,43 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 97vh;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.coin-list {
+  background-color: #fff;
+  max-width: 33.33%;
+  height: 700px;
+  border-radius: 12px;
+  padding: 1rem;
+  border-right: 1px solid #ccc;
+}
+
+.searchBar {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #bfb3f2;
+  height: 30px;
+  font-size: 17px;
+}
+
+.graph {
+  background-color: #fff;
+  width: 66.66%;
+  padding: 1rem;
+  border-radius: 12px;
+  height: 275px;
+}
